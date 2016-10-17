@@ -1,0 +1,57 @@
+body{
+	overflow:hidden;
+	margin:0px;
+	background-color: rgb(40,40,40);
+}
+#juego{
+	width:600px;
+	height:600px;
+	position:relative;
+	background-color:#ffcc00;
+}
+#juego .pieza{
+	position:absolute;
+	width:200px;
+	height:200px;
+	border-radius:7px;
+	border:1px solid gray;
+	transition:150ms;
+	background-size:cover;
+}
+#contenedor{
+	width:600px;
+	height:600px;
+	background-color:#ffcc00;
+	padding:50px;
+	padding-top:10px;
+	margin:0px auto 0px auto;
+
+	border-radius:20px;
+}
+.icono{
+	height:45px;
+	width:45px;
+	background-size:cover;
+	float:left;
+	margin-right: 20px;
+}
+.icono:hover{
+	transform:scale(2);
+	transition-duration: 0.5s;
+}
+.icono.Kappa{
+	background-image: url("../images/icons/Kappa.png");
+}
+.icono.Pikachu{
+	background-image: url("../images/icons/Pikachu.png");
+}
+.icono.Twitch{
+	background-image: url("../images/icons/Twitch.png");
+}
+#contador-movimientos{
+	color:#6800ff;
+	padding-left: 50px;
+	float:left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}

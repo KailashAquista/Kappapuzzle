@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Juego</title>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<script src="javascript/juego.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/juego.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+	<div id="contenedor">
+	<div id="juego">
+	</div>
+	<div id="botonera">
+		<div class="icono Kappa" onclick='juego.eliminarPiezas("Kappa"), juego.cambiarFondo("660066", "ffcc00")'></div>
+		<div class="icono Pikachu" onclick='juego.eliminarPiezas("Pikachu"), juego.cambiarFondo("ffcc00", "6800ff")'></div>
+		<div class="icono Twitch" onclick='juego.eliminarPiezas("Twitch"), juego.cambiarFondo("008000", "e40000")'></div>
+		<p id="contador-movimientos"></p>
+	</div>
+	</div>
+	
+	</body>
+</html>
