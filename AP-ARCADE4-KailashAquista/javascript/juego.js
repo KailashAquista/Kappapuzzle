@@ -4,6 +4,7 @@ var juego ={
 	nombre:"Pikachu",
 	cantidadMovimientos:0,
 	isMezclado:false,
+	gano:false,
 	capturarTeclas: function()
 	{
 		var that=this;
@@ -114,7 +115,7 @@ var juego ={
 			this.moverFichaFilaColumna(ficha, this.espacioVacio.fila, this.espacioVacio.columna);
 			this.filas[this.espacioVacio.fila][this.espacioVacio.columna] = ficha;
 			this.guardarEspacioVacio(fila, columna);
-			if(this.isMezclado)
+			if(this.isMezclado&&!this.gano)
 				this.actualizarContadorMovimientos();
 		}
 		
@@ -124,6 +125,7 @@ var juego ={
 		this.instalarPiezas(elemento);
 		this.cantidadMovimientos=0;
 		juego.mezclarPiezas(200);
+		this.gano=false;
 		this.cantidadMovimientos=0;
 		if(this.nombre=="Pikachu")
 		{
@@ -163,6 +165,8 @@ var juego ={
 			}
 		}
 		this.cambiarImagenPiezasCuandoGano();
+		$("#contador-movimientos").html("¡Ganaste!");
+		this.gano=true;
 	},
 	mezclarPiezas:function(veces)
 	{
